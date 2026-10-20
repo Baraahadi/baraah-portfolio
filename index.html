@@ -17,6 +17,11 @@ body{background:var(--bg);color:#4A4A4A;font-family:var(--serif);height:800vh}
 #cam{position:absolute;left:50%;top:50%;width:min(100vw,160vh);aspect-ratio:8/5;translate:-50% -50%;transform-origin:52.5% 55.2%;transition:transform 3.2s cubic-bezier(.65,0,.25,1),opacity 1.6s;will-change:transform}
 #cam svg{position:absolute;inset:0;width:100%;height:100%}
 @media(max-aspect-ratio:1/1){#cam{width:190vh}}
+ @media(max-aspect-ratio:1/1){
+  [data-s="7"] #cam{
+    transform:translateX(-37%);
+  }
+}
 [data-s="1"] #cam,[data-s="2"] #cam,[data-s="3"] #cam,[data-s="5"] #cam{transform:scale(7)}
 [data-s="3"] #cam,[data-s="5"] #cam{opacity:0}
 #dim{position:absolute;inset:-50%;background:radial-gradient(circle at 60% 60%,transparent 0,rgba(226,180,189,.5) 14%,rgba(226,180,189,.96) 38%);transition:opacity 3s;pointer-events:none}
